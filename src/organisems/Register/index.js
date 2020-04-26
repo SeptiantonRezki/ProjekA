@@ -6,10 +6,10 @@ import {
   StyleSheet
 } from 'react-native';
 
-const Login = () => {
+const Register = () => {
   return (
       <View style={{paddingHorizontal : 10, marginTop : 30}}>
-        <Text>LOGIN</Text>
+        <Text>Selamat Datang</Text>
         <TextInput placeholder="Masukkan Email Anda" keyboardType="email-address"/>
         <TextInput placeholder="Masukkan Password Anda" secureTextEntry={true} />
       </View>
@@ -27,4 +27,4 @@ const styles = StyleSheet.create({
   
 
 
-export default Login;
+export default Register;
