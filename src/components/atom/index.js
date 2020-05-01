@@ -1,8 +1,9 @@
 import Input from './input';
-import Button from './button'
+import {ButtonAction, ButtonNavigation} from './button';
 
 
 export {
     Input,
-    Button,
+    ButtonAction,
+    ButtonNavigation,
 };

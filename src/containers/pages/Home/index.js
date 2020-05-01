@@ -3,8 +3,13 @@ import {View, Text} from 'react-native';
 
 const Home = () => {
     return (
-        <View>
-            <Text>Home guys</Text>
+        <View style={{paddingHorizontal : 20 , paddingTop : 10, flex : 1}}>
+            <View>
+
+            </View>
+            <View></View>
+            <View></View>
+            <View></View>
         </View>
     )
 }

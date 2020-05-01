@@ -1,17 +1,35 @@
 import React from 'react';
-import {View, TouchableOpacity, Text, StyleSheet} from 'react-native';
+import {TouchableOpacity, Text, StyleSheet} from 'react-native';
 
 
-const Button = ({keteranagan}) => {
+export const ButtonAction = ({keterangan, onPress}) => {
     return (
-        <TouchableOpacity style={styles.button}>
-            <Text style={styles.Text}>{keteranagan}</Text>
+        <TouchableOpacity style={styles.buttonAction} onPress={onPress}>
+            <Text style={styles.Text}>{keterangan}</Text>
+        </TouchableOpacity>
+    )
+}
+
+export const ButtonNavigation = ({navigation, keterangan, onPress}) => {
+    return (
+        <TouchableOpacity style={styles.buttonNavigation} onPress={onPress}>
+            <Text style={styles.Text}>{keterangan}</Text>
         </TouchableOpacity>
     )
 }
 
 const styles = StyleSheet.create({
-    button : { 
+    buttonAction : { 
+        backgroundColor:'#555111', 
+        justifyContent : 'center', 
+        alignItems : 'center',
+        paddingHorizontal : 20,
+        height : 40,
+        marginTop : 10, 
+        borderRadius : 5
+    },
+
+    buttonNavigation : { 
         backgroundColor:'#555111', 
         justifyContent : 'center', 
         alignItems : 'center',
@@ -26,5 +44,3 @@ const styles = StyleSheet.create({
 
 });
   
-
-export default Button;
