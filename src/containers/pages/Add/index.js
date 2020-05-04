@@ -7,7 +7,7 @@ const Add = () => {
         setCount(prevCount => prevCount + 1)
     }
     const onChange = () => {
-        DeviceAcceleration("aku");
+        alert("aku");
     }
 
     useEffect(() => {

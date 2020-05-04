@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import { About, Add, Home, Keranjang, Login, Register, Update, ListBarang, A } from '../containers/pages';
+import { About, Add, Home, Login, Register, Update, ListBarang, A, ListBulanan, ListHarian, ListTanggal } from '../containers/pages';
 
 
 const Stack = createStackNavigator();
@@ -22,8 +22,12 @@ const Router = () => {
 
             <Stack.Screen name ='Home' component={Home} options={{headerShown: false}}/>
             <Stack.Screen name ='About' component={About} options={{headerShown: false}}/>
-            <Stack.Screen name ='Keranjang' component={Keranjang} options={{headerShown: false}}/>
             <Stack.Screen name ='Ubah Produk' component={Update} options={{headerShown: false}}/>
+            
+            
+            <Stack.Screen name ='List Bulanan' component={ListBulanan} options={{headerShown: false}}/>
+            <Stack.Screen name ='List Tanggalan' component={ListTanggal} options={{headerShown: false}}/>
+            <Stack.Screen name ='List Harian' component={ListHarian} options={{headerShown: false}}/>
         </Stack.Navigator>
     )
 }

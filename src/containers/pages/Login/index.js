@@ -17,10 +17,7 @@ const Login = ({navigation}) => {
                 <ButtonAction keterangan="LOGIN" onPress={() => handlePress('Home')}/>
             </View>
 
-            <View style= {styles.bawah}>
-                <ButtonNavigation  keterangan='LOGIN' onPress={() => handlePress('Login')} />
-                <ButtonNavigation  keterangan='REGISTER' onPress={() => handlePress('Register')}/>
-            </View>
+           
 
         </View>
     )
