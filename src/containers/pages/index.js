@@ -9,6 +9,7 @@ import A from './A';
 import ListHarian from './ListHarian';
 import ListBulanan from './ListBulanan'; 
 import ListTanggal from './ListTanggal'; 
+import TakeImage from './TestImage';
 
 
-export {About , Add, Home , Login, Register, Update, ListBarang, A, ListHarian, ListTanggal ,ListBulanan};
+export {About , Add, Home , Login, Register, Update, ListBarang, A, ListHarian, ListTanggal ,ListBulanan, TakeImage};
