@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import {View, TouchableOpacity, Text, TextInput} from 'react-native';
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
+import { functionA } from '../../../redux';
 
 // const A = ({navigation}) => {
 
@@ -80,6 +81,7 @@ import {useSelector} from 'react-redux';
 // }
 const A = () => {
     const globalState = useSelector(state => state);
+    const dispatch = useDispatch();
 
 
     const [input, setInput] = useState({
@@ -91,7 +93,11 @@ const A = () => {
             [namaInput] : value
         })
         console.log('a');
-        alert('a')
+        alert('a');
+    }
+    function click(input_nama, value_nama ){
+        alert("berhasil");
+        dispatch(functionA(input_nama, value_nama));
     }
     function cetak(){
         alert("aaaa");
@@ -99,11 +105,18 @@ const A = () => {
     return (
         <Fragment>
         <View>
-            {console.log(globalState)}
+            {console.log(globalState.reducerRegister.nama)}
             <TextInput onChangeText={value => onChangeInput('nama', value )}/>
             <Text>{input.nama}</Text><Text>harusnya disitu</Text>
             <TouchableOpacity onPress={() => console.log("kirim data")}>
                 <Text>ini data</Text>
+            </TouchableOpacity>
+
+            <Text style ={{marginTop : 10}}>
+                {globalState.reducerRegister.nama}
+            </Text>
+            <TouchableOpacity style ={{marginTop : 10}} onPress={() => click('nama' , 'diganti')}>
+                <Text>ok</Text>
             </TouchableOpacity>
         </View>
         </Fragment>

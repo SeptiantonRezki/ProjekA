@@ -4,6 +4,12 @@ const initialStateRegister = {
     nama : 'SeptiantonRezki'
 }
 const reducerRegister = (state = initialStateRegister , action) => {
+    if(action.type === "LOGIN"){
+        return {
+            ...state,
+            [action.input_nama] : action.value_nama
+        }
+    }
     return state;
 }
 const initialStateLogin = {
