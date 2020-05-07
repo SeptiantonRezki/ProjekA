@@ -18,7 +18,9 @@ const styles = StyleSheet.create({
     },
 
     Text : {
-        marginBottom : 15  
+        marginBottom : 15,
+        fontFamily : 'sans-serif-medium',
+        color : 'white'  
     }, 
 
     TextInput : {
@@ -26,6 +28,7 @@ const styles = StyleSheet.create({
         borderWidth : 0.7,
         width : 300,
         borderRadius : 10,
+        borderColor : 'white',
         paddingHorizontal : 20
 
     }

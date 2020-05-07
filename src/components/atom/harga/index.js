@@ -4,7 +4,7 @@ import TextTicker from 'react-native-text-ticker';
 
 const KontenHarga = () => {
     return (
-        <ScrollView style={{flex : 5, marginVertical : 10, paddingHorizontal : 20}}>
+        <ScrollView style={{flex : 5, marginVertical : 10, paddingHorizontal : 20}} showsVerticalScrollIndicator={false}>
                 <View style= {{flex : 1 , flexDirection :'row', flexWrap : 'wrap', backgroundColor : 'white', borderRadius : 5}}>
 
                     <View style={{width : '30%', alignItems :'center', justifyContent :'center', padding : 10, borderBottomWidth : 1}}>

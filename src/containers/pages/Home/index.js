@@ -11,23 +11,23 @@ const Home = ({navigation}) => {
 
 
     return (
-        <View style={{ paddingTop : 10, flex : 1, backgroundColor : 'green'}}>
-            <View style={{flex : 0.05, marginHorizontal : 20, backgroundColor : 'white', opacity : 0.5, paddingHorizontal : 10, paddingVertical : 10, borderRadius :5}}>
+        <View style={{ paddingTop : 10, flex : 1, backgroundColor : 'lightblue'}}>
+            <View style={{flex : 0.05, marginHorizontal : 20, backgroundColor : 'blue', opacity : 0.5, paddingHorizontal : 10, paddingVertical : 10, borderRadius :5}}>
                 <TextTicker
                     style={{ fontSize: 15, color : 'white' }}
-                    duration={10000}
+                    duration={8000}
                     loop
                     bounce
                     repeatSpacer={50}
                     marqueeDelay={1000}
                     >
-                    Super long piece of text is long. The quick brown fox jumps over the lazy dog.
+                    Second Peace - Perhatian Aplikasi Ini Masih Dalam Pengembangan
                 </TextTicker>    
             </View>
-            <View style={{ marginHorizontal : 20, flex : 0.2, backgroundColor : 'blue', marginTop : 10, flexDirection : 'row', borderRadius : 5}}>
+            <View style={{ marginHorizontal : 20, flex : 0.2, backgroundColor : '#0080ff', marginTop : 10, flexDirection : 'row', borderRadius : 5}}>
 
                 <TouchableOpacity onPress={() => handlePrees('Add')} style={{flex : 1, alignItems : 'center', justifyContent : 'center', paddingVertical : 10}}>
-                    <View style={{height : 50, borderRadius : 5,  width : 50, backgroundColor : 'green'}}>
+                    <View style={{height : 50, borderRadius : 5,  width : 50, backgroundColor : '#00cc00'}}>
 
                     </View>
                     <Text style={{color : 'white', fontSize : 10, marginTop : 3}}>
@@ -36,7 +36,7 @@ const Home = ({navigation}) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={() => handlePrees('Add')} style={{flex : 1, alignItems : 'center', justifyContent : 'center', paddingVertical : 10}}>
-                    <View style={{height : 50, borderRadius : 5,  width : 50, backgroundColor : 'green'}}>
+                    <View style={{height : 50, borderRadius : 5,  width : 50, backgroundColor : '#00cc00'}}>
 
                     </View>
                     <Text style={{color : 'white', fontSize : 10, marginTop : 3}}>
@@ -49,17 +49,20 @@ const Home = ({navigation}) => {
             </View>
             <KontenHarga />
 
-            <View style={{height : 50, backgroundColor : 'blue', flexDirection : 'row'}}>
-                <View style={{flex : 1, backgroundColor:'orange', justifyContent : 'center', alignItems : 'center'}}>
-                    <Text>
+            <View style={{height : 50,  flexDirection : 'row'}}>
+                <TouchableOpacity style={{flex : 1, backgroundColor : '#0080ff',  justifyContent : 'center', alignItems : 'center'}}>
+                    
+                    <Text style={{color : 'white'}}>
                         Profile
                     </Text>
-                </View>
-                <View style={{flex : 1, backgroundColor:'yellow', justifyContent : 'center', alignItems : 'center'}}>
-                    <Text>
+                </TouchableOpacity>
 
+                <TouchableOpacity style={{flex : 1, backgroundColor : '#0080ff',  justifyContent : 'center', alignItems : 'center'}}>
+                
+                    <Text style={{color : 'white'}}>
+                        Table
                     </Text>
-                </View>
+                </TouchableOpacity>
             </View>
         </View>
     )

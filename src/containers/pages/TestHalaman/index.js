@@ -1,9 +1,8 @@
-import React, { Fragment, useEffect, useState } from 'react';
-import {View, TouchableOpacity, Text, TextInput} from 'react-native';
-import {useSelector, useDispatch} from 'react-redux';
-import { functionA } from '../../../redux';
+import React from 'react';
+import { Text, TouchableOpacity, View } from 'react-native';
+import { useSelector } from 'react-redux';
 
-const A = ({navigation}) => {
+const TestHalaman = ({navigation}) => {
 
 
     const globalState = useSelector(state => state);
@@ -23,29 +22,29 @@ const A = ({navigation}) => {
                 <Text style ={{textAlign : 'center'}}>Halaman Register</Text>
             </TouchableOpacity> */}
 
-            <TouchableOpacity style={{width : '100%', backgroundColor : 'orange', marginVertical :10, paddingVertical : 10, borderRadius : 10}} onPress={() => handlePress('List Barang')}>
+            {/* <TouchableOpacity style={{width : '100%', backgroundColor : 'orange', marginVertical :10, paddingVertical : 10, borderRadius : 10}} onPress={() => handlePress('List Barang')}>
                 <Text style ={{textAlign : 'center'}}>Halaman List Barang</Text>
-            </TouchableOpacity>
-
+            </TouchableOpacity> */}
+{/* 
             <TouchableOpacity style={{width : '100%', backgroundColor : 'orange', marginVertical :10, paddingVertical : 10, borderRadius : 10}} onPress={() => handlePress('Tambah Produk')}>
                 <Text style ={{textAlign : 'center'}}>Halaman Tambah Produk</Text>
-            </TouchableOpacity>
-
+            </TouchableOpacity> */}
+{/* 
             <TouchableOpacity style={{width : '100%', backgroundColor : 'orange', marginVertical :10, paddingVertical : 10, borderRadius : 10}} onPress={() => handlePress('Ubah Produk')}>
                 <Text style ={{textAlign : 'center'}}>Halaman Ubah Produk</Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
 
             <TouchableOpacity style={{width : '100%', backgroundColor : 'orange', marginVertical :10, paddingVertical : 10, borderRadius : 10}} onPress={() => handlePress('List Bulanan')}>
                 <Text style ={{textAlign : 'center'}}>Halaman Detail Bulanan</Text>
             </TouchableOpacity>
-
+{/* 
             <TouchableOpacity style={{width : '100%', backgroundColor : 'orange', marginVertical :10, paddingVertical : 10, borderRadius : 10}} onPress={() => handlePress('List Tanggalan')}>
                 <Text style ={{textAlign : 'center'}}>Halaman Detail Tanggal</Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
 
-            <TouchableOpacity style={{width : '100%', backgroundColor : 'orange', marginVertical :10, paddingVertical : 10, borderRadius : 10}} onPress={() => handlePress('List Harian')}>
+            {/* <TouchableOpacity style={{width : '100%', backgroundColor : 'orange', marginVertical :10, paddingVertical : 10, borderRadius : 10}} onPress={() => handlePress('List Harian')}>
                 <Text style ={{textAlign : 'center'}}>Halaman Detail Hari</Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
 
             <TouchableOpacity style={{width : '100%', backgroundColor : 'orange', marginVertical :10, paddingVertical : 10, borderRadius : 10}} onPress={() => handlePress('Home')}>
                 <Text style ={{textAlign : 'center'}}>Halaman Home</Text>
@@ -57,47 +56,5 @@ const A = ({navigation}) => {
         </View>
     )
 }
-// const A = () => {
-//     const globalState = useSelector(state => state);
-//     const dispatch = useDispatch();
 
-
-//     const [input, setInput] = useState({
-//         nama : '',
-//     })
-//     function onChangeInput(namaInput, value){
-//         setInput({
-//             ...input,
-//             [namaInput] : value
-//         })
-//         console.log('a');
-//         alert('a');
-//     }
-//     function click(input_nama, value_nama ){
-//         alert("berhasil");
-//         dispatch(functionA(input_nama, value_nama));
-//     }
-//     function cetak(){
-//         alert("aaaa");
-//     }
-//     return (
-//         <Fragment>
-//         <View>
-//             {console.log(globalState.reducerRegister.nama)}
-//             <TextInput onChangeText={value => onChangeInput('nama', value )}/>
-//             <Text>{input.nama}</Text><Text>harusnya disitu</Text>
-//             <TouchableOpacity onPress={() => console.log("kirim data")}>
-//                 <Text>ini data</Text>
-//             </TouchableOpacity>
-
-//             <Text style ={{marginTop : 10}}>
-//                 {globalState.reducerRegister.nama}
-//             </Text>
-//             <TouchableOpacity style ={{marginTop : 10}} onPress={() => click('nama' , 'diganti')}>
-//                 <Text>ok</Text>
-//             </TouchableOpacity>
-//         </View>
-//         </Fragment>
-//     )
-// }
-export default A;
+export default TestHalaman;
