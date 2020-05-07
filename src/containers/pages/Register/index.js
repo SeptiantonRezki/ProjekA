@@ -11,14 +11,14 @@ import { registerUserAPI } from '../../../redux';
 const Register = ({navigation}) => {
 
     const stateRegister = useSelector(state => state.reducerRegister);
-    const Dispatch = useDispatch();
-    const registerApi = (data) => Dispatch(registerUserAPI(data));
+    const dispatch = useDispatch();
+    const registerApi = (data) => dispatch(registerUserAPI(data));
+    
     const [user , setUser]= useState({
         nama : 'aaa',
         email : '',
         password : '',
     });
-
 
 
     handlePress = (screen) => {
@@ -32,25 +32,14 @@ const Register = ({navigation}) => {
         })
     }
 
-    const handleClick = () => {
-        const {email, password} = user;
-        auth()
-            .createUserWithEmailAndPassword(email, password)
-            .then(res => {
-                alert("masuk");
-
-                console.log(res.user);
-            })
-            .catch(function(error) { 
-                console.log('error', error);
-            })
+    const handleClick = async () => {
         
-        // const res = await registerApi(user);
-        // if(res == true) {
-        //     alert("berhasil");
-        // }else {
-        //     alert("gagal");
-        // }
+        const res = await registerApi(user);
+        if(res) {
+            alert("berhasil");
+        }else {
+            alert("gagal");
+        }
     }
 
     return (
