@@ -4,7 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import { 
     About , Add, Home , Login, Register, Update, ListBarang, ListHarian, ListTanggal ,ListBulanan, 
 
-    TestHalaman, TestImage, TestReducer
+    TestHalaman, TestImage, TestReducer, TestFirebase
 
 } from '../containers/pages';
 
@@ -15,8 +15,10 @@ const Router = () => {
     
     return (
         <Stack.Navigator>
-            {/* Komponen Test */}
+
             <Stack.Screen name ='Test Halaman' component={TestHalaman} options={{headerShown: false}}/>
+            {/* Komponen Test */}
+            <Stack.Screen name ='Test Firebase' component={TestFirebase}/>
             <Stack.Screen name ='Test Image' component={TestImage}/>
             <Stack.Screen name ='Test Reducer' component={TestReducer} options={{headerShown: false}}/>
             

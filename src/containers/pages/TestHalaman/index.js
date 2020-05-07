@@ -18,9 +18,9 @@ const TestHalaman = ({navigation}) => {
                 <Text style ={{textAlign : 'center'}}>Halaman Login</Text>
             </TouchableOpacity>
             
-            {/* <TouchableOpacity style={{width : '100%', backgroundColor : 'orange', marginVertical :10, paddingVertical : 10, borderRadius : 10}} onPress={() => handlePress('Register')}>
+            <TouchableOpacity style={{width : '100%', backgroundColor : 'orange', marginVertical :10, paddingVertical : 10, borderRadius : 10}} onPress={() => handlePress('Register')}>
                 <Text style ={{textAlign : 'center'}}>Halaman Register</Text>
-            </TouchableOpacity> */}
+            </TouchableOpacity>
 
             {/* <TouchableOpacity style={{width : '100%', backgroundColor : 'orange', marginVertical :10, paddingVertical : 10, borderRadius : 10}} onPress={() => handlePress('List Barang')}>
                 <Text style ={{textAlign : 'center'}}>Halaman List Barang</Text>

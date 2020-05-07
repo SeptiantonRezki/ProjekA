@@ -22,6 +22,8 @@ const TestReducer = () => {
     }
     function click(input_nama, value_nama ){
         alert("berhasil");
+        // dispatch
+        // dispatch({type : "nama_actionnya"})
         dispatch(functionA(input_nama, value_nama));
     }
     function cetak(){
