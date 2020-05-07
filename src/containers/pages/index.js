@@ -15,10 +15,11 @@ import TestHalaman from './TestHalaman';
 import TestImage from './TestImage';
 import TestReducer from './TestReducer';
 import TestFirebase from './TestFirebase';
+import TestHalamanNotLogin from './TestHalamanNotLogin';
 
 
 export {
     About , Add, Home , Login, Register, Update, ListBarang, ListHarian, ListTanggal ,ListBulanan, 
 
-    TestHalaman, TestImage, TestReducer, TestFirebase
+    TestHalaman, TestImage, TestReducer, TestFirebase, TestHalamanNotLogin
 };

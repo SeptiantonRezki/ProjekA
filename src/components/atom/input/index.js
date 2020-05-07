@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     Text : {
         marginBottom : 15,
         fontFamily : 'sans-serif-medium',
-        color : 'white'  
+          
     }, 
 
     TextInput : {

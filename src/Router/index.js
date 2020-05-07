@@ -4,39 +4,55 @@ import {createStackNavigator} from '@react-navigation/stack';
 import { 
     About , Add, Home , Login, Register, Update, ListBarang, ListHarian, ListTanggal ,ListBulanan, 
 
-    TestHalaman, TestImage, TestReducer, TestFirebase
+    TestHalaman, TestImage, TestReducer, TestFirebase, TestHalamanNotLogin
 
 } from '../containers/pages';
+import {useSelector } from 'react-redux';
+
 
 
 const Stack = createStackNavigator();
-
 const Router = () => {
+    const {reducerRegister} = useSelector(state => state);
     
     return (
         <Stack.Navigator>
 
-            <Stack.Screen name ='Test Halaman' component={TestHalaman} options={{headerShown: false}}/>
-            {/* Komponen Test */}
-            <Stack.Screen name ='Test Firebase' component={TestFirebase}/>
-            <Stack.Screen name ='Test Image' component={TestImage}/>
-            <Stack.Screen name ='Test Reducer' component={TestReducer} options={{headerShown: false}}/>
-            
-            {/* Komponen Penyambut */}
-            <Stack.Screen name ='Register' component={Register} options={{headerShown: false}}/>
-            <Stack.Screen name ='Login' component={Login} options={{headerShown: false}}/>
-            <Stack.Screen name ='Home' component={Home} options={{headerShown: false}}/>
-            <Stack.Screen name ='About' component={About} options={{headerShown: false}}/>
+            {reducerRegister.login ? (
+            <>
+                {/* halaman yang bisa di akses sebelum login */}
+                {/* Komponen Test */}
+                <Stack.Screen name ='Home' component={Home} options={{headerShown: false}}/>
+                <Stack.Screen name ='Test Halaman' component={TestHalaman} options={{headerShown: false}}/>
+                <Stack.Screen name ='Test Firebase' component={TestFirebase}/>
+                <Stack.Screen name ='Test Image' component={TestImage}/>
+                <Stack.Screen name ='Test Reducer' component={TestReducer} options={{headerShown: false}}/>
+                
+                {/* Komponen Penyambut */}
+                <Stack.Screen name ='About' component={About} options={{headerShown: false}}/>
 
-            {/* Produk */}
-            <Stack.Screen name ='Tambah Produk' component={Add}/>
-            <Stack.Screen name ='Ubah Produk' component={Update} options={{headerShown: false}}/>
-            <Stack.Screen name ='List Barang' component={ListBarang}/>
+                {/* Produk */}
+                <Stack.Screen name ='Tambah Produk' component={Add}/>
+                <Stack.Screen name ='Ubah Produk' component={Update} options={{headerShown: false}}/>
+                <Stack.Screen name ='List Barang' component={ListBarang}/>
+                
+                {/* Komponen List */}
+                <Stack.Screen name ='List Bulanan' component={ListBulanan} options={{headerShown: false}}/>
+                <Stack.Screen name ='List Tanggalan' component={ListTanggal} options={{headerShown: false}}/>
+                <Stack.Screen name ='List Harian' component={ListHarian} options={{headerShown: false}}/></>
+            ) : (
+            <>
+            {/* halaman yang bisa di akses sesudah login */}
+                <Stack.Screen name ='Test Halaman Sebelum Login' component={TestHalamanNotLogin}/>
+                
+                <Stack.Screen name ='Login' component={Login} options={{headerShown: false}}/>
+                <Stack.Screen name ='Register' component={Register} options={{headerShown: false}}/>
             
-            {/* Komponen List */}
-            <Stack.Screen name ='List Bulanan' component={ListBulanan} options={{headerShown: false}}/>
-            <Stack.Screen name ='List Tanggalan' component={ListTanggal} options={{headerShown: false}}/>
-            <Stack.Screen name ='List Harian' component={ListHarian} options={{headerShown: false}}/>
+            </>
+            )
+            }
+
+            
         </Stack.Navigator>
     )
 }

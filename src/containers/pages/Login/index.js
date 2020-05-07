@@ -1,12 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {View, StyleSheet, Image, Text} from 'react-native';
 import {ButtonNavigation, ButtonAction, Input} from '../../../components/atom';
+import { loginUserAPI } from '../../../redux';
+import { useDispatch, useSelector } from 'react-redux';
+
 
 
 const Login = ({navigation}) => {
+    const userFirebase = useSelector(state => state);
+    const dispatch = useDispatch();
+    const loginApi = (data) => dispatch(loginUserAPI(data));
 
+
+    const [user , setUser] = useState({
+        email : '',
+        password : ''
+    })
     handlePress = (screen) => {
         navigation.navigate(screen);
+    }
+
+    const handleChange = (input_name, input_value) => {
+        setUser({
+            ...user,
+            [input_name] : input_value
+        })
+        console.log(user);        
+    }
+
+
+    const handleLogin = async () => {
+        const res = await loginApi(user);
+        if(res) {
+            // localStorage.setItem('userData', JSON.stringify(res));
+            // this.setState({
+            //     email : '',
+            //     password : ''
+            // })
+            dispatch({type : 'CHANGE_LOGIN', value : true});
+            navigation.navigate('Home');
+        }
+        console.log(userFirebase);    
     }
 
     return (
@@ -20,13 +54,10 @@ const Login = ({navigation}) => {
                     Selamat Datang
                 </Text>
 
-                <Input keteranagan="Email" placeholder="Email" secureTextEntry={false} keyboardType='email-address'/>
-                <Input keteranagan="Password" placeholder="Password" secureTextEntry={true}/>
-                <ButtonAction keterangan="LOGIN" onPress={() => handlePress('Home')}/>
+                <Input keteranagan="Email" value={user.email} onChangeText={(value) => handleChange('email', value)} placeholder="Email" secureTextEntry={false} keyboardType='email-address'/>
+                <Input keteranagan="Password" value={user.password} onChangeText={(value) => handleChange('password', value)} placeholder="Password" secureTextEntry={true}/>
+                <ButtonAction keterangan="LOGIN" onPress={handleLogin}/>
             </View>
-
-           
-
         </View>
     )
 }
