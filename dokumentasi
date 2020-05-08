@@ -1,4 +1,5 @@
-untuk generate mejad aplikasi
+1. untuk generate mejad aplikasi
+
 https://reactnative.dev/docs/signed-apk-android
 https://stackoverflow.com/questions/56576462/gradlew-bundlerelease-doesnt-generate-release-apk-in-react-native
 I had the same problem. Following command worked for me:

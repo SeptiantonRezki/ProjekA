@@ -38,7 +38,7 @@ const Login = ({navigation}) => {
             //     password : ''
             // })
             dispatch({type : 'CHANGE_LOGIN', value : true});
-            navigation.navigate('Home');
+            navigation.navigate('Test Database');
         }
         console.log(userFirebase);    
     }

@@ -4,7 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import { 
     About , Add, Home , Login, Register, Update, ListBarang, ListHarian, ListTanggal ,ListBulanan, 
 
-    TestHalaman, TestImage, TestReducer, TestFirebase, TestHalamanNotLogin
+    TestHalaman, TestImage, TestReducer, TestFirebase, TestHalamanNotLogin, TestDatabase
 
 } from '../containers/pages';
 import {useSelector } from 'react-redux';
@@ -27,6 +27,7 @@ const Router = () => {
                 <Stack.Screen name ='Test Firebase' component={TestFirebase}/>
                 <Stack.Screen name ='Test Image' component={TestImage}/>
                 <Stack.Screen name ='Test Reducer' component={TestReducer} options={{headerShown: false}}/>
+                <Stack.Screen name ='Test Database' component={TestDatabase} options={{headerShown: false}}/>
                 
                 {/* Komponen Penyambut */}
                 <Stack.Screen name ='About' component={About} options={{headerShown: false}}/>
